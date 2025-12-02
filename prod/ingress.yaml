@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress
+  namespace: dummyapps
+spec:
+ rules:
+  - host: assistx-prod.puxonime.icu
+    http:
+      paths:
+      - path: /
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: dummyapps-lb
+            port:
+              number: 80
+      - path: /burn-cpu
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: dummyapps-lb
+            port:
+              number: 80

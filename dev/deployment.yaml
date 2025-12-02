@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: assistx-dummy-apps
+  namespace: dummyapps-dev
+  labels:
+    app: dummyapps
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dummyapps
+  template:
+    metadata:
+      labels:
+        app: dummyapps
+    spec:
+      containers:
+      - name: dummyapps
+        image: josaphatyoga/fastapi-burncpu:1.0.0
+        ports:
+        - containerPort: 8080
