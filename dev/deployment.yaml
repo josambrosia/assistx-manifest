@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: dummyapps
-        image: josaphatyoga/fastapi-burncpu:806dda1b5e05a901fc6f9ebad96c9644bd3fd644-dev
+        image: josaphatyoga/fastapi-burncpu:9d7311ff690be1e8e569154e63926018f379a73e-dev
         ports:
         - containerPort: 8080
         resources:
